@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio | Home</title>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="logo">My Portfolio</a>
+
+            <!-- Mobile hamburger button -->
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="biodata.html">Bio-data</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="home-container">
+
+        <!-- Welcome section -->
+        <section class="home-card">
+
+        <!-- Profile photograph -->
+        <img src="profile.jpeg"
+            alt="Photo of Aanchal"
+            class="home-photo">
+
+            <h1>Hello, I'm Aanchal</h1>
+
+            <h2>Computer Science Engineering Student</h2>
+
+            <p>
+                Welcome to my personal portfolio website! I am a passionate
+                engineering student interested in technology, programming
+                and innovation. I enjoy learning new skills and developing
+                creative solutions to real-world problems.
+            </p>
+
+            <!-- Links to other pages -->
+            <div class="home-buttons">
+                <a href="resume.html" class="primary-btn">
+                    <i class="fa-solid fa-file-lines"></i>
+                    View My Resume
+                </a>
+
+                <a href="biodata.html" class="secondary-btn">
+                    <i class="fa-solid fa-user"></i>
+                    View Bio-data
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2026 Aanchal | Personal Portfolio</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page information and mobile responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Resume</title>
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER: Contains the navigation bar -->
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="logo">My Portfolio</a>
+
+            <!-- Hamburger button for mobile screens -->
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="biodata.html">Bio-data</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- MAIN: Contains the main resume content -->
+    <main class="resume-container">
+
+        <!-- Profile section -->
+        <section class="profile-section">
+
+           <img src="profile.jpeg"
+                alt="Aanchal's Profile Photo"
+                class="resume-photo">
+            <h1>My <span>Resume</span></h1>
+
+            <p class="profile-subtitle">
+                Computer Science and Engineering Student
+            </p>
+
+            <!-- Contact information -->
+            <div class="contact-row">
+                <a href="mailto:yourmail@example.com">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
+
+                <a href="tel:+910000000000">
+                    <i class="fa-solid fa-phone"></i> Phone
+                </a>
+
+                <a href="https://github.com/anchalkanthi-source" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+
+                <a href="https://linkedin.com/in/yourusername" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <!-- Download resume PDF -->
+            <a href="resume.pdf" download class="download-btn">
+                <i class="fa-solid fa-download"></i> Download Resume PDF
+            </a>
+
+        </section>
+
+
+        <!-- Career objective -->
+        <section class="resume-card">
+            <h2>Career Objective</h2>
+
+            <p>
+                Motivated Computer Science and Engineering student interested
+                in software development, problem-solving, and cybersecurity.
+                Eager to learn new technologies and apply technical knowledge
+                to practical projects.
+            </p>
+        </section>
+
+
+        <!-- Education details -->
+        <section class="resume-card">
+            <h2>Education</h2>
+
+            <div class="education-entry">
+                <div>
+                    <h3>Bachelor of Engineering – Computer Science</h3>
+                    <p>KLE Institute of Technology</p>
+                    <p>Visvesvaraya Technological University</p>
+                </div>
+
+                <div class="education-year">
+                    <p>2024 – Present</p>
+                </div>
+            </div>
+
+            <div class="education-entry">
+                <div>
+                    <h3>Pre-University Course (PUC)</h3>
+                    <p>KLE Prerana College</p>
+                </div>
+
+                <div class="education-year">
+                    <p>2022-2024</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Technical skills -->
+        <section class="resume-card">
+            <h2>Technical Skills</h2>
+
+            <div class="skill-group">
+                <h3>Programming Languages</h3>
+
+                <div class="skill-list">
+                    <span class="skill-badge blue">C</span>
+                    <span class="skill-badge blue">C++</span>
+                    <span class="skill-badge blue">Python</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Web Technologies</h3>
+
+                <div class="skill-list">
+                    <span class="skill-badge green">HTML</span>
+                    <span class="skill-badge green">CSS</span>
+                    <span class="skill-badge green">JavaScript</span>
+                    <span class="skill-badge green">Flask</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section class="resume-card">
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <h3>Password Strength Analyzer</h3>
+
+                    <p>
+                        A web-based application that evaluates password
+                        strength and provides suggestions to improve password
+                        security.
+                    </p>
+
+                    <p class="tech-stack">
+                        <strong>Technologies:</strong> Python, Flask,
+                        HTML, CSS, JavaScript
+                    </p>
+
+                    <a href="https://github.com/anchalkanthi-source/Password-Strength-Analyzer"
+                       target="_blank">
+                        View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <h3>BharatSetu</h3>
+
+                    <p>
+                        BharatSetu is an AI-powered Citizen Welfare and Government Service Navigator that aims to bridge the gap between citizens and fragmented government services through a unified platform. It leverages AI, NLP, and RAG to understand users' needs, assess eligibility, and recommend relevant government schemes, scholarships, jobs, and educational opportunities..
+                    </p>
+
+                    <p class="tech-stack">
+                        <strong>Technologies:</strong> Tech Stack: Next.js + TypeScript + Tailwind CSS (Frontend) | FastAPI + Python (Backend) | PostgreSQL + ChromaDB (Database)
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Certifications -->
+        <section class="resume-card">
+            <h2>Certifications & Workshops</h2>
+
+            <ul class="resume-list">
+                <li>Python Course – Samsung College Program</li>
+                <li>AI Tools and Side Income Workshop – BE10X</li>
+            </ul>
+        </section>
+
+
+        <!-- Career interests -->
+        <section class="resume-card">
+            <h2>Areas of Interest</h2>
+
+            <ul class="resume-list">
+                <li>Software Development</li>
+                <li>Cybersecurity</li>
+                <li>Artificial Intelligence</li>
+                <li>Problem Solving and Data Structures</li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER: Copyright information -->
+    <footer class="site-footer">
+        <p>© 2026 Aanchal. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript file for mobile navigation -->
+    <script src="script.js"></script>
+
+</body>
+</html>

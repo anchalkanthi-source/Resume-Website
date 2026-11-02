@@ -1,0 +1,742 @@
+/* =========================================
+   1. CSS VARIABLES - ROSE PINK THEME
+   These variables make the website colours
+   easy to change from one place.
+========================================= */
+
+:root {
+    --nav: #4a1730;          /* Navbar, headings and footer */
+    --accent: #d6336c;       /* Main pink for buttons, links and highlights */
+    --accent-hover: #b02a5b; /* Darker pink when hovering over buttons */
+    --bg-from: #fbe0ea;      /* Start colour of page background gradient */
+    --bg-to: #fff8fa;        /* End colour of page background gradient */
+    --card-bg: #ffffff;      /* Background colour of content cards */
+    --card-border: #f3d1de;  /* Soft pink border around cards */
+    --text: #3b2430;         /* Main paragraph and body text */
+    --text-muted: #7a5c6b;    /* Secondary text, dates and descriptions */
+    --badge-bg: #fde8ef;     /* Light pink background for skill badges */
+    --badge-text: #72243e;   /* Dark pink text inside skill badges */
+}
+
+
+/* =========================================
+   2. GENERAL PAGE STYLING
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   3. HEADER AND NAVIGATION BAR
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--nav);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Portfolio logo */
+.logo {
+    color: var(--card-bg);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #f4c0d1;
+    text-decoration: none;
+    padding-bottom: 6px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Navigation hover effect */
+.nav-links a:hover {
+    color: var(--card-bg);
+}
+
+/* Active navigation link */
+.nav-links a.active {
+    color: var(--card-bg);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Hamburger button - hidden on desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--card-bg);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   4. MAIN RESUME CONTAINER
+========================================= */
+
+.resume-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   5. PROFILE SECTION AND TITLE
+========================================= */
+
+.profile-section {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Circular initials profile placeholder */
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: var(--nav);
+    color: var(--card-bg);
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Main resume title */
+.profile-section h1 {
+    color: var(--nav);
+    font-size: 32px;
+}
+
+/* Pink colour for the word Resume */
+.profile-section h1 span {
+    color: var(--accent);
+}
+
+/* Subtitle below the title */
+.profile-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   6. CONTACT LINKS
+========================================= */
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.contact-row a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-row a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   7. DOWNLOAD RESUME BUTTON
+========================================= */
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--card-bg);
+
+    padding: 10px 20px;
+    border-radius: 6px;
+
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+
+/* =========================================
+   8. RESUME SECTION CARDS
+========================================= */
+
+.resume-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+
+    padding: 25px;
+    margin-bottom: 22px;
+
+    box-shadow: 0 3px 10px rgba(74, 23, 48, 0.08);
+}
+
+/* Section headings */
+.resume-card h2 {
+    text-align: center;
+    color: var(--nav);
+    margin-bottom: 20px;
+}
+
+/* Paragraph text */
+.resume-card p {
+    text-align: left;
+    color: var(--text);
+}
+
+
+/* =========================================
+   9. EDUCATION SECTION
+========================================= */
+
+.education-entry {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.education-entry:last-child {
+    border-bottom: none;
+}
+
+.education-entry h3 {
+    color: var(--nav);
+}
+
+.education-year {
+    text-align: right;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   10. TECHNICAL SKILLS AND BADGES
+========================================= */
+
+.skill-group {
+    margin-bottom: 20px;
+}
+
+.skill-group h3 {
+    margin-bottom: 10px;
+    color: var(--nav);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Rounded skill badges */
+.skill-badge {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+/* Both skill categories use the same rose theme */
+.skill-badge.blue,
+.skill-badge.green {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+
+/* =========================================
+   11. PROJECT CARDS
+========================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+.project-card h3 {
+    color: var(--nav);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+/* Project technology descriptions */
+.tech-stack {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* GitHub and project links */
+.project-card a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   12. CERTIFICATIONS AND INTERESTS
+========================================= */
+
+.resume-list {
+    padding-left: 25px;
+    color: var(--text);
+}
+
+.resume-list li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+.site-footer {
+    background-color: var(--nav);
+    color: var(--card-bg);
+
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   14. HOMEPAGE STYLING
+========================================= */
+
+.home-container {
+    width: 90%;
+    max-width: 1000px;
+    min-height: 75vh;
+    margin: 35px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 45px 35px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(74, 23, 48, 0.08);
+}
+
+.home-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: var(--badge-bg);
+    color: var(--accent);
+    font-size: 35px;
+}
+
+.home-card h1 {
+    color: var(--nav);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home-card h2 {
+    color: var(--accent);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.home-card p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+/* Homepage buttons */
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: var(--card-bg);
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.secondary-btn {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent);
+    color: var(--card-bg);
+}
+
+
+/* =========================================
+   15. BIO-DATA PAGE STYLING
+========================================= */
+
+.biodata-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+.biodata-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.biodata-heading h1 {
+    color: var(--nav);
+    font-size: 32px;
+}
+
+.biodata-heading p {
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.biodata-details p {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--card-border);
+    overflow-wrap: anywhere;
+    color: var(--text);
+}
+
+.biodata-details p:last-child {
+    border-bottom: none;
+}
+
+.biodata-details strong {
+    color: var(--nav);
+}
+
+/* Email and phone links */
+.biodata-details a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.biodata-details a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.back-home {
+    text-align: center;
+    margin: 25px 0;
+}
+
+
+/* =========================================
+   16. RESPONSIVE DESIGN
+   Applies to screens under 768px
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Mobile navigation */
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+    }
+
+    .nav-links a {
+        display: inline-block;
+    }
+
+    /* Resume content */
+    .resume-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .profile-section h1 {
+        font-size: 26px;
+    }
+
+    .education-entry {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .education-year {
+        text-align: left;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-row {
+        gap: 12px 18px;
+    }
+
+    .resume-card {
+        padding: 18px;
+    }
+
+    /* Homepage */
+    .home-container,
+    .biodata-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .home-card {
+        padding: 30px 20px;
+    }
+
+    .home-card h1 {
+        font-size: 28px;
+    }
+
+    .home-card h2 {
+        font-size: 19px;
+    }
+
+    .home-card p {
+        font-size: 15px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .home-buttons a {
+        text-align: center;
+    }
+
+    .biodata-heading h1 {
+        font-size: 26px;
+    }
+
+    .biodata-details p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   17. EXTRA SMALL SCREENS
+   Applies to screens under 480px
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .profile-circle {
+        width: 85px;
+        height: 85px;
+        font-size: 25px;
+    }
+
+    .profile-section h1 {
+        font-size: 23px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .download-btn {
+        font-size: 14px;
+    }
+
+    .resume-card h2 {
+        font-size: 20px;
+    }
+
+    .home-card {
+        padding: 25px 15px;
+    }
+
+    .home-card h1 {
+        font-size: 24px;
+    }
+
+    .home-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 28px;
+    }
+
+    .biodata-container {
+        width: 92%;
+    }
+
+    .resume-card {
+        padding: 16px;
+    }
+}
+/* =====================================
+   HOME PAGE PROFILE PHOTO
+===================================== */
+
+.home-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(74, 23, 48, 0.15);
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Profile photo on smaller screens */
+@media screen and (max-width: 480px) {
+    .home-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Circular profile photograph */
+.resume-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(74, 23, 48, 0.15);
+    display: block;
+    margin: 0 auto 15px;
+}
+
+@media screen and (max-width: 480px) {
+    .resume-photo {
+        width: 110px;
+        height: 110px;
+    }
+}
